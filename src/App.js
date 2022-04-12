@@ -5,7 +5,7 @@ import ArticleAuthor from './components/ArticleAuthor.jsx';
 
 function App() {
   return (
-    <div >
+    <div>
       <ArticleAuthor />
     </div>
   );
