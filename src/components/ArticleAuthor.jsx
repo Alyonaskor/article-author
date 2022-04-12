@@ -12,7 +12,7 @@ const authorMoc = {
 
 const ArticleAuthor = () => (
     
-  <Item >
+  <Item style={{width: '800px', height: 'auto'}}>
     <Item.Image floated="left" size="mini" src={authorMoc.avatarUrl} />
       <Item.Header href={authorMoc.authorPage} as="a">
         {authorMoc.header}
