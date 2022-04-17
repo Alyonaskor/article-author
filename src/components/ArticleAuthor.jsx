@@ -30,7 +30,7 @@ ArticleAuthor.propTypes = {
   name:PropTypes.string.isRequired,
   avatar:PropTypes.string,
   content:PropTypes.string.isRequired,
-  avatarSize: PropTypes.oneOf(["mini", "tiny","small", "medium" ]),
+  avatarSize: PropTypes.oneOf(["mini", "tiny","small", "medium" ]).isRequired,
   avatarShape: PropTypes.oneOf(["square", "circular"])
 };
 
