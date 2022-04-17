@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ArticleAuthor = ({name, avatar, content}) => {
+const ArticleAuthor = ({name, avatar, content, avatarSize}) => {
   return (
     <div style={{ width: "960px", height: "auto" }}>
       <div className="item">
-        <div className="ui tiny image left floated">
+        <div className={`ui ${avatarSize} image left floated`}>
           <img
             src={avatar}
             alt="Avatar"
@@ -29,13 +29,11 @@ const ArticleAuthor = ({name, avatar, content}) => {
 ArticleAuthor.propTypes = {
   name:PropTypes.string.isRequired,
   avatar:PropTypes.string,
-  content:PropTypes.string.isRequired
-}
+  content:PropTypes.string.isRequired,
+  avatarSize: PropTypes.oneOf(["mini", "tiny","small", "medium" ])
+};
 
-ArticleAuthor.defaultProps = {
-  name: "Article Author Name",
-  avatar: "https://react.semantic-ui.com/images/avatar/large/molly.png",
-  content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
-}
+
+
 
 export default ArticleAuthor;

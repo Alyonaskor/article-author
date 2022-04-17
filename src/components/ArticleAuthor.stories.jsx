@@ -2,6 +2,7 @@ import React from "react";
 import ArticleAuthor from "./ArticleAuthor";
 import "semantic-ui-css/semantic.min.css";
 
+
 export default {
     title: "Article Author",
     component: ArticleAuthor,
