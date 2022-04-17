@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ArticleAuthor = ({name, avatar, content, avatarSize}) => {
+const ArticleAuthor = ({name, avatar, content, avatarSize,avatarShape}) => {
   return (
     <div style={{ width: "960px", height: "auto" }}>
       <div className="item">
-        <div className={`ui ${avatarSize} image left floated`}>
+        <div className={`ui ${avatarSize} ${avatarShape} image left floated`}>
           <img
             src={avatar}
             alt="Avatar"
@@ -30,7 +30,8 @@ ArticleAuthor.propTypes = {
   name:PropTypes.string.isRequired,
   avatar:PropTypes.string,
   content:PropTypes.string.isRequired,
-  avatarSize: PropTypes.oneOf(["mini", "tiny","small", "medium" ])
+  avatarSize: PropTypes.oneOf(["mini", "tiny","small", "medium" ]),
+  avatarShape: PropTypes.oneOf(["square", "circular"])
 };
 
 
